@@ -15,7 +15,7 @@
 
 	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
 		<ItemGroup>
-			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
 		</ItemGroup>
 	</Target>
 
@@ -30,9 +30,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="StackExchange.Redis" Version="[2.0.513,)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="[2.0.0,)" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="[2.0.0,)" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.0.513" />
 	</ItemGroup>
 
 	<ItemGroup>
